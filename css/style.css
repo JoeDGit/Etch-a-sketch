@@ -1,0 +1,10 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Lucida Console", Courier, monospace;
+    color: #7347ed;
+    text-decoration: underline;
+}
+body {
+    background-color: black;
+}
