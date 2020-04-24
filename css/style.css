@@ -4,7 +4,35 @@ h1 {
     font-family: "Lucida Console", Courier, monospace;
     color: #7347ed;
     text-decoration: underline;
+    margin-top: 40px;
 }
 body {
+    background-color: black;
+}
+
+#alignSketch{
+    height: 50%;
+    width: 50%;
+}
+
+#sketchContain {
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-gap: 2px 2px;
+    justify-content: center;
+    overflow: auto;
+}
+
+
+.squareContain {   
+    height: 25px;
+    width: 25px;
+    background-color: #7347ed;
+    
+
+}
+.squareContain:hover {
     background-color: black;
 }
