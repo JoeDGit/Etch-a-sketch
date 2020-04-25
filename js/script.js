@@ -10,8 +10,8 @@ function sketchy (x) {
     }
 }
 
-
-
+sketchy(256);
+colourOn();
 
 
 
@@ -35,23 +35,9 @@ document.getElementById("subSquares").addEventListener("click", function() {
     let pixelNo = prompt("Enter the number of pixels you'd like in your sketch", 256);
     let sqR = document.querySelectorAll(".squareReleased");
     let sqC = document.querySelectorAll(".squareContain");
-    let totalDiv = sqR.length + sqC.length
-    console.log(totalDiv);
-    if (pixelNo === totalDiv){
-        sketchy(totalDiv);
-        sqR.forEach(node => node.style.backgroundColor = "white");
+    sqR.forEach(node => node.remove());
+    sqC.forEach(node => node.remove());
 
-    } else if (pixelNo < totalDiv) {
-        for(i = totalDiv-1; i > pixelNo; i--) {
-            sqC[i].remove();
-        }
-        sqR.forEach(node => node.style.backgroundColor = "white");
-    }
-    else {
-        sketchy(pixelNo-totalDiv);
-        sqR.forEach(node => node.style.backgroundColor = "white");
-    
-    };
 
 
     sqR.forEach(node => node.style.backgroundColor = "white");
