@@ -12,3 +12,18 @@ function sketchy (x) {
 
 sketchy(256);
 
+const sC = document.querySelectorAll(".squareContain");
+sC.forEach(node => node.addEventListener ("mouseover", function(e) {
+
+    e.target.className = ".squareReleased"
+    console.log(e);
+}));
+console.log(sC);
+
+
+
+
+
+
+
+  

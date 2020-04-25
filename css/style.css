@@ -11,18 +11,25 @@ body {
 }
 
 #alignSketch{
-    height: 50%;
-    width: 50%;
+    height:auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 500px;
+    top: 300px;
+    left: 300px;
+    right: 300px;
 }
 
 #sketchContain {
-    height: auto;
-    width: auto;
+    height: 430px;
+    width: 430px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto;
-    grid-gap: 2px 2px;
-    justify-content: center;
-    overflow: auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    gap: 2px 2px;
+    
+    overflow: hidden;
 }
 
 
@@ -33,6 +40,9 @@ body {
     
 
 }
-.squareContain:hover {
+.squareReleased {
+
+    height: 25px;
+    width: 25px;
     background-color: black;
 }
