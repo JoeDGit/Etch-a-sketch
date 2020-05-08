@@ -1,5 +1,3 @@
-
-
 function sketchy (x) {
     const inputSquared = Math.pow(x, 2);
     sketchContain.setAttribute("style",
@@ -17,10 +15,9 @@ function sketchy (x) {
 
 
 
-function colourOn()  {                                  // Triggers the mouseover behaviour and sets colour to random. 
-                                                        // Made into a function so it can be called when button is clicked, instead of on page load.
+function colourOn()  {                                  
 const sC = document.querySelectorAll(".squareContain");
-sC.forEach(node => node.addEventListener ("mouseover", function(e) {
+sC.forEach(node => node.addEventListener ("mouseover", function handleMouseOver(e) {
 
     e.target.className = "squareReleased"
 
@@ -28,7 +25,6 @@ sC.forEach(node => node.addEventListener ("mouseover", function(e) {
     e.target.style.backgroundColor = "#" + randomColor;
     
 }))};
-
 
 
 
@@ -42,15 +38,53 @@ document.getElementById("subSquares").addEventListener("click", function() {
     let sqC = document.querySelectorAll(".squareContain");
         sqR.forEach(node => node.remove());
         sqC.forEach(node => node.remove());
+        document.getElementById("sWhite").style.visibility = "visible";
+        document.getElementById("sBlack").style.visibility = "visible";        
+        document.getElementById("reset").style.visibility = "visible";
 
-        sqR.forEach(node => node.style.backgroundColor = "white");
       
         sketchy(pixelNo);
         colourOn();
        
 }} );
-    
 
+document.getElementById("sWhite").addEventListener("click", () => {
+
+    const sC = document.querySelectorAll(".squareContain");    
+    sC.forEach(node => node.addEventListener ("mouseover", function(e) {
+        e.target.style.backgroundColor = "white";
+    }));
+
+    let sqR = document.querySelectorAll(".squareReleased");    
+    sqR.forEach(node => node.addEventListener ("mouseover", function(e) {
+        e.target.style.backgroundColor = "white";
+    }));
+
+});
+
+
+document.getElementById("sBlack").addEventListener("click", () => {
+
+    const sC = document.querySelectorAll(".squareContain");    
+    sC.forEach(node => node.addEventListener ("mouseover", function(e) {
+        e.target.style.backgroundColor = "black";
+    }));
+
+    let sqR = document.querySelectorAll(".squareReleased");    
+    sqR.forEach(node => node.addEventListener ("mouseover", function(e) {
+        e.target.style.backgroundColor = "black";
+    }));
+
+});
+
+    
+document.getElementById("reset").addEventListener("click", () => {
+    let sqR = document.querySelectorAll(".squareReleased");    
+    sqR.forEach(node => node.style.backgroundColor = "grey");
+    
+       
+        
+});
 
 
 

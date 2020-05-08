@@ -33,11 +33,28 @@ button {
     width: 200px;
     height: 30px;
 }
+#sWhite {
+    position: relative;
+    top: 50px;
+    visibility: hidden;
+}
+
+#sBlack {
+    position: relative;
+    top: 100px;
+    visibility: hidden;
+}
+
+#reset {
+    position: relative;
+    top: 150px;
+    visibility: hidden;
+}
 
 #inputs {
-    width: 400px;
-    align-content: center;
-    display:flex;
+    width: 200px;
+    height: 250px;
+    align-content: center;   
     position: fixed;
     left: auto;
     top: auto;
