@@ -1,10 +1,13 @@
 h1 {
-    display: flex;
-    justify-content: right;
+    height: 40px;
+    width: 600px;
+    position: relative;
+    left: 775px;
+    
     font-family: "Lucida Console", Courier, monospace;
     color: #7347ed;
     text-decoration: underline;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 body {
     background-color: black;
@@ -20,7 +23,8 @@ input {
     
 }
 button {
-    
+    position: relative;
+    left: 200px;
     background-color: #7347ed;
     border-color: #7347ed;
     color: white;
@@ -41,25 +45,29 @@ button {
 }
 
 #alignSketch{
-    height: auto;
-    width: auto;
+    height: 800px;
+    width: 800px;
     display: flex;
     justify-content: center;
-    position: fixed;
-    bottom: 0px;
-    top: 300px;
-    left: 300px;
-    right: 300px;
+    position: absolute;
+    bottom: auto;
+    top: auto;
+    left: 600px;
+    right: auto;
+    border-color: #7347ed;
+    border-width: 3px;
+    border-style: solid;
 }
 
 #sketchContain {
-    height: 960px;
-    width: 960px;
+    height: 800px;
+    width: 800px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    gap: 2px 2px;
-    position: absolute;
-    bottom: 0px;
+    grid-template-columns: repeat (16, 1fr);
+    grid-template-rows: repeat (16, 1fr);
+    justify-content: stretch;
+    position: relative;
+      
 
     
     
@@ -69,7 +77,7 @@ button {
 .squareContain {   
     height: auto;
     width: auto;
-    background-color: white;
+    background-color: grey;
     
 
 }
